@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wroclawjug-random-attendee-v2/static/css/main.2cce8147.chunk.css",
+    "main.js": "/wroclawjug-random-attendee-v2/static/js/main.c5cc6257.chunk.js",
+    "main.js.map": "/wroclawjug-random-attendee-v2/static/js/main.c5cc6257.chunk.js.map",
+    "runtime~main.js": "/wroclawjug-random-attendee-v2/static/js/runtime~main.8f0868c1.js",
+    "runtime~main.js.map": "/wroclawjug-random-attendee-v2/static/js/runtime~main.8f0868c1.js.map",
+    "static/js/2.b41502e9.chunk.js": "/wroclawjug-random-attendee-v2/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/wroclawjug-random-attendee-v2/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/wroclawjug-random-attendee-v2/index.html",
+    "precache-manifest.4e10fcb4c1807646946536ebd578e87d.js": "/wroclawjug-random-attendee-v2/precache-manifest.4e10fcb4c1807646946536ebd578e87d.js",
+    "service-worker.js": "/wroclawjug-random-attendee-v2/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/wroclawjug-random-attendee-v2/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/wroclawjug-random-attendee-v2/static/media/logo.5d5d9eef.svg"
+  }
+}
