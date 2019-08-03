@@ -7,7 +7,7 @@ import ClientForm from "./ClientForm";
 const CLIENT_CONFIG = {
 	accessTokenUri: "https://secure.meetup.com/oauth2/access",
 	authorizationUri: "https://secure.meetup.com/oauth2/authorize",
-	redirectUri: "http://localhost:3000",
+	redirectUri: "klekowskim.github.io/wroclawjug-random-attendee-v2",
 	scopes: ["basic"]
 };
 
