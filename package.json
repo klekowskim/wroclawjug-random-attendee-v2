@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "http://klekowskim.github.io/wroclawjug-random-attendee-v2",
   "dependencies": {
+    "axios": "^0.19.0",
     "client-oauth2": "^4.2.5",
+    "query-string": "^6.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -18,7 +20,13 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "quotes": [
+        "error",
+        "double"
+      ]
+    }
   },
   "browserslist": {
     "production": [
