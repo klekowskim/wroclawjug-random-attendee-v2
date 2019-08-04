@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wroclawjug-random-attendee-v2/precache-manifest.a27b29d0c8ea725cf78a5cd296353b4d.js"
+  "/wroclawjug-random-attendee-v2/precache-manifest.a2c2f1e3c1c8a3211c12a23b39279ff7.js"
 );
 
 self.addEventListener('message', (event) => {
