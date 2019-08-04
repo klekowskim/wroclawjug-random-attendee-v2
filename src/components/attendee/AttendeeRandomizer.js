@@ -4,10 +4,7 @@ import injectApi from "../api/injectApi";
 import Attendee from "./Attendee";
 
 function randomNumber(size) {
-	console.log(">random from 0 to ", size);
-	const random = Math.floor(Math.random() * size - 1) + 1;
-	console.log(">result", random);
-	return random;
+	return Math.floor(Math.random() * size - 1) + 1;
 }
 
 class AttendeeRandomizer extends React.Component {
