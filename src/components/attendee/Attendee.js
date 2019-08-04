@@ -24,9 +24,11 @@ class Attendee extends React.Component {
 		return (
 			<React.Fragment>
 				<div onClick={this.showFullPreview}>
-					<div>
-						<img src={attendee.member.photo.thumb_link} alt={attendee.member.name} />
-					</div>
+					{attendee.member.photo && (
+						<div>
+							<img src={attendee.member.photo.thumb_link} alt={attendee.member.name} />
+						</div>
+					)}
 					{attendee.member.name}
 				</div>
 				{this.state.fullPreviewVisible && (
