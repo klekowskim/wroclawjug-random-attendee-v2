@@ -8,9 +8,11 @@ class FullMemberPreview extends React.Component {
 		let { attendee, onClose } = this.props;
 		return (
 			<div className="FullMemberPreview" onClick={onClose}>
-				<div className="image-container">
-					<img src={attendee.member.photo.highres_link} alt={attendee.member.name} />
-				</div>
+				{attendee.member.photo && (
+					<div className="image-container">
+						<img src={attendee.member.photo.highres_link} alt={attendee.member.name} />
+					</div>
+				)}
 				<h3>{attendee.member.name}</h3>
 			</div>
 		);
