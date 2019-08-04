@@ -12,8 +12,10 @@ export default class Api {
 
 		this.axios = axios.create({
 			baseURL: BASE_URL,
-			headers: {
-				Authorization: `Bearer ${token}`
+			params: {
+				// cannot pass token by header, because it is not send with OPTIONS request,
+				// and without it CORS will block all requests
+				access_token: token
 			}
 		});
 	}

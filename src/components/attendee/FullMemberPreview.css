@@ -1,0 +1,23 @@
+.FullMemberPreview {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.FullMemberPreview .image-container {
+    max-height: 90%;
+    max-width: 90%;
+    align-self: center;
+}
+
+.FullMemberPreview .image-container img {
+    max-height: 90%;
+    max-width: 90%;
+}
