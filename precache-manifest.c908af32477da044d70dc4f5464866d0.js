@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d4c0bd8aae3f45a92b4dfde1269f13c",
+    "revision": "6155b1717221ff2d22bf0e9bfed1ee0f",
     "url": "/wroclawjug-random-attendee-v2/index.html"
   },
   {
-    "revision": "4bc12ee38974302ac45e",
+    "revision": "5d51535e5912344504fd",
     "url": "/wroclawjug-random-attendee-v2/static/css/main.ed9b602d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wroclawjug-random-attendee-v2/static/js/2.65c4c114.chunk.js"
   },
   {
-    "revision": "4bc12ee38974302ac45e",
-    "url": "/wroclawjug-random-attendee-v2/static/js/main.9246ee2d.chunk.js"
+    "revision": "5d51535e5912344504fd",
+    "url": "/wroclawjug-random-attendee-v2/static/js/main.a75d1bff.chunk.js"
   },
   {
     "revision": "4bf9933d882ed55aadc3",
