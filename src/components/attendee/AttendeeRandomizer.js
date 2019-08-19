@@ -1,13 +1,38 @@
+// @flow
+/** @jsx jsx */
 import React from "react";
-import PropTypes from "prop-types";
 import injectApi from "../api/injectApi";
-import Attendee from "./Attendee";
+import { Button } from "../layout";
+import type { Attendee as AttendeeType, Event } from "../api/Api";
+import Api from "../api/Api";
+import { jsx } from "@emotion/core";
+import Summary from "./Summary";
+import AttendeesList from "./AttendeesList";
 
 function randomNumber(size) {
 	return Math.floor(Math.random() * size - 1) + 1;
 }
 
-class AttendeeRandomizer extends React.Component {
+type Props = {
+	api: Api,
+	event: Event
+}
+type State = {
+	attendees: Array<AttendeeType>,
+	attendeesToRandom: Array<AttendeeType>,
+	winners: Array<AttendeeType>,
+	losers: Array<AttendeeType>
+}
+
+const style = {
+	buttonsContainer: {
+		"> *": {
+			margin: 10
+		}
+	}
+};
+
+class AttendeeRandomizer extends React.Component<Props, State> {
 
 	constructor(props) {
 		super(props);
@@ -63,45 +88,35 @@ class AttendeeRandomizer extends React.Component {
 	};
 
 	render() {
-		const { attendees, winners, losers } = this.state;
+		const { attendees, attendeesToRandom, winners, losers } = this.state;
 
 		return (
 			<div>
-				<div>
-					<span>Number of attendees:</span>
-					<span>{attendees.length}</span>
+				<h1>Let's random!</h1>
+
+				<Summary all={attendees.length} available={attendeesToRandom.length} />
+				<div css={style.buttonsContainer}>
+					<Button onClick={this.randomAttendee}>
+						Random attendee
+					</Button>
+					<Button onClick={this.markLastAttendeeAsLooser}>
+						Last not present
+					</Button>
+					<Button type="danger" onClick={this.clear}>
+						Clear
+					</Button>
 				</div>
 				<div>
-					<button onClick={this.randomAttendee}>Random attendee</button>
-					<button onClick={this.clear}>Clear</button>
-					<button onClick={this.markLastAttendeeAsLooser}>Last not present</button>
-				</div>
-				<div>
-					<div>
-						Winners:
-					</div>
-					<div>
-						{winners.map(attendee => (
-							<Attendee attendee={attendee} key={attendee.member.id} />
-						))}
-					</div>
-					<div>
-						Guys who missed their opportunity :):
-					</div>
-					<div>
-						{losers.map(attendee => (
-							<Attendee attendee={attendee} key={attendee.member.id} />
-						))}
-					</div>
+
+					<h2>Winners</h2>
+					<AttendeesList attendees={winners.slice().reverse()} />
+
+					<h2>Guys who missed their opportunity</h2>
+					<AttendeesList attendees={losers.slice().reverse()} />
 				</div>
 			</div>
 		);
 	}
 }
-
-AttendeeRandomizer.propTypes = {
-	api: PropTypes.object.isRequired,
-	event: PropTypes.object.isRequired
-};
 
 export default injectApi(AttendeeRandomizer);

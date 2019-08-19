@@ -1,8 +1,34 @@
+// @flow
+/** @jsx jsx */
 import React from "react";
-import PropTypes from "prop-types";
 import injectApi from "../api/injectApi";
+import { H1 } from "../layout";
+import type { Event as EventType } from "../api/Api";
+import Api from "../api/Api";
+import Event from "./Event";
+import { jsx } from "@emotion/core";
 
-class EventsSelector extends React.Component {
+type Props = {
+	api: Api,
+	onSelect: (event: EventType) => void
+};
+
+type State = {
+	events: Array<EventType>
+}
+
+const style = {
+	list: {
+		border: "1px solid rgba(0,0,0,.12)",
+		borderRadius: "3px",
+		display: "block",
+		listStyle: "none",
+		margin: "0 0 16px",
+		padding: 0
+	}
+};
+
+class EventsSelector extends React.Component<Props, State> {
 
 	constructor(props) {
 		super(props);
@@ -19,25 +45,20 @@ class EventsSelector extends React.Component {
 	}
 
 	render() {
+		const { onSelect } = this.props;
 		const { events } = this.state;
 
 		return (
 			<div>
-				{events.map(event => (
-					<div key={event.id}>
-						<span onClick={() => {
-							this.props.onSelect(event)
-						}}>{event.name}</span>
-					</div>
-				))}
+				<h1>Choose one of the following events:</h1>
+				<ul css={style.list}>
+					{events.map(event => (
+						<Event event={event} onSelect={onSelect} key={event.id} />
+					))}
+				</ul>
 			</div>
 		);
 	}
 }
-
-EventsSelector.propTypes = {
-	api: PropTypes.object.isRequired,
-	onSelect: PropTypes.func.isRequired
-};
 
 export default injectApi(EventsSelector);

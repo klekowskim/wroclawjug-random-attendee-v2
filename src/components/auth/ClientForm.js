@@ -7,53 +7,39 @@ class ClientForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			clientId: "",
-			clientSecret: ""
+			rememberMe: false
 		}
 	}
 
 	onSubmit = (event) => {
 		event.preventDefault();
 
-		const { clientId, clientSecret } = this.state;
+		const { rememberMe } = this.state;
 
-		this.props.onSubmit({ clientId, clientSecret })
+		this.props.onSubmit({ rememberMe })
 	};
 
-	onClientIdChange = (event) => {
-		this.setState({ clientId: event.target.value });
-	};
-
-	onClientSecretChange = (event) => {
-		this.setState({ clientSecret: event.target.value });
+	onRememberMeChange = (event) => {
+		this.setState({ rememberMe: event.target.checked });
 	};
 
 	render() {
-		const { clientId, clientSecret } = this.state;
+		const { rememberMe } = this.state;
 
 		return (
 			<div className="ClientForm">
 				<form onSubmit={this.onSubmit} autoComplete="off">
-					<div className="form-group">
-						<label htmlFor="clientId">Client id</label>
-						<input
-							type="text"
-							id="clientId"
-							name="clientId"
-							value={clientId}
-							onChange={this.onClientIdChange}
-							data-lpignore="true" />
-					</div>
+
+					<p>Click button below to log in with your meetup account</p>
 
 					<div className="form-group">
-						<label htmlFor="clientSecret">Client secret</label>
+						<label htmlFor="clientSecret">Remember me</label>
 						<input
-							type="password"
-							id="clientSecret"
-							name="clientSecret"
-							value={clientSecret}
-							onChange={this.onClientSecretChange}
-							data-lpignore="true" />
+							type="checkbox"
+							id="rememberMe"
+							name="rememberMe"
+							checked={rememberMe}
+							onChange={this.onRememberMeChange} />
 					</div>
 
 					<button type="submit">Log in</button>

@@ -4,8 +4,11 @@
   "private": true,
   "homepage": "http://klekowskim.github.io/wroclawjug-random-attendee-v2",
   "dependencies": {
+    "@emotion/core": "^10.0.16",
+    "@emotion/styled": "^10.0.15",
     "axios": "0.18.1",
     "client-oauth2": "^4.2.5",
+    "flow-bin": "^0.105.2",
     "query-string": "^6.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -17,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app",

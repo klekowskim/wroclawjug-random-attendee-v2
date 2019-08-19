@@ -1,15 +1,16 @@
 import React from "react";
-import Container from "../layout/Container";
-import LeftColumn from "../layout/LeftColumn";
-import RightColumn from "../layout/RightColumn";
 import EventsSelector from "../events/EventsSelector";
 import AttendeeRandomizer from "../attendee/AttendeeRandomizer";
+import UserInfo from "./UserInfo";
+import SelectedEvent from "./SelectedEvent";
+import { Container, LeftColumn, RightColumn } from "../layout";
 
 class Content extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
+			selectedMeetup: null,
 			selectedEvent: null,
 			attendees: []
 		};
@@ -19,18 +20,18 @@ class Content extends React.Component {
 		this.setState({ selectedEvent: event });
 	};
 
+	onEventClear = () => {
+		this.setState({ selectedEvent: null })
+	};
+
 	render() {
 		const { selectedEvent } = this.state;
 
 		return (
 			<Container>
 				<LeftColumn>
-					{selectedEvent !== null && (
-						<div>
-							<div>Selected event:</div>
-							<div>{selectedEvent.name}</div>
-						</div>
-					)}
+					<UserInfo />
+					<SelectedEvent selectedEvent={selectedEvent} onClear={this.onEventClear} />
 				</LeftColumn>
 				<RightColumn>
 					{selectedEvent === null && (
