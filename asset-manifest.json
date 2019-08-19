@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wroclawjug-random-attendee-v2/static/css/main.ed9b602d.chunk.css",
-    "main.js": "/wroclawjug-random-attendee-v2/static/js/main.9d7bda11.chunk.js",
-    "main.js.map": "/wroclawjug-random-attendee-v2/static/js/main.9d7bda11.chunk.js.map",
+    "main.css": "/wroclawjug-random-attendee-v2/static/css/main.e1488ee5.chunk.css",
+    "main.js": "/wroclawjug-random-attendee-v2/static/js/main.fac1f90c.chunk.js",
+    "main.js.map": "/wroclawjug-random-attendee-v2/static/js/main.fac1f90c.chunk.js.map",
     "runtime~main.js": "/wroclawjug-random-attendee-v2/static/js/runtime~main.8f0868c1.js",
     "runtime~main.js.map": "/wroclawjug-random-attendee-v2/static/js/runtime~main.8f0868c1.js.map",
-    "static/js/2.65c4c114.chunk.js": "/wroclawjug-random-attendee-v2/static/js/2.65c4c114.chunk.js",
-    "static/js/2.65c4c114.chunk.js.map": "/wroclawjug-random-attendee-v2/static/js/2.65c4c114.chunk.js.map",
+    "static/js/2.aeeae33b.chunk.js": "/wroclawjug-random-attendee-v2/static/js/2.aeeae33b.chunk.js",
+    "static/js/2.aeeae33b.chunk.js.map": "/wroclawjug-random-attendee-v2/static/js/2.aeeae33b.chunk.js.map",
     "index.html": "/wroclawjug-random-attendee-v2/index.html",
-    "precache-manifest.7899d6a0a38fafcfab7b69fad08ca25d.js": "/wroclawjug-random-attendee-v2/precache-manifest.7899d6a0a38fafcfab7b69fad08ca25d.js",
+    "precache-manifest.00b2f8052cff1ab40f114bc067a98a0d.js": "/wroclawjug-random-attendee-v2/precache-manifest.00b2f8052cff1ab40f114bc067a98a0d.js",
     "service-worker.js": "/wroclawjug-random-attendee-v2/service-worker.js",
-    "static/css/main.ed9b602d.chunk.css.map": "/wroclawjug-random-attendee-v2/static/css/main.ed9b602d.chunk.css.map"
+    "static/css/main.e1488ee5.chunk.css.map": "/wroclawjug-random-attendee-v2/static/css/main.e1488ee5.chunk.css.map"
   }
 }
