@@ -10,7 +10,7 @@ const CLIENT_CONFIG = {
 	clientId: "cpft4h30lu74ove69ksqcog7sr",
 	accessTokenUri: "https://secure.meetup.com/oauth2/access",
 	authorizationUri: "https://secure.meetup.com/oauth2/authorize",
-	redirectUri: `${window.location.origin}`,
+	redirectUri: `${window.location.origin}${window.location.pathname}`,
 	scopes: ["basic"]
 };
 
