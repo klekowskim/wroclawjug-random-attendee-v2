@@ -21,7 +21,7 @@ const style = {
 class AttendeePicture extends React.Component<Props> {
 	render() {
 		const { attendee } = this.props;
-		const photoUrl = attendee.member.photo.thumb_link;
+		const photoUrl = attendee.member.photo.photo_link;
 		return (
 			<div css={[
 				style.container,

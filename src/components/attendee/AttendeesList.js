@@ -37,8 +37,8 @@ function AttendeesList({ attendees }: Props) {
 	return (
 		<div css={style.container}>
 			{attendees.map((attendee, idx) => (
-				<div css={style.attendeeContainer}>
-					<Attendee attendee={attendee} big={idx === 0} key={attendee.member.id} />
+				<div css={style.attendeeContainer} key={attendee.member.id}>
+					<Attendee attendee={attendee} big={idx === 0} />
 				</div>
 			))}
 		</div>
